@@ -1,0 +1,23 @@
+To allow for easier editing and updates, each unit will have "raw" files included,
+these should be saved;
+
+.blend ----- allows for scale and model changes. Should be the latest version of the unit (the one ingame).
+
+_UV.png ----- allows for textures to be created or edited without rexporting a uv map.
+_diffuse.png ----- the final layer of a unit. determines gray areas, edge highlights, and other decals.
+_material.png ----- basicly the 'reflectivity' mask. determines how shiny areas look.
+_mask.png ----- sets which areas are painted by primary and secondary colors, and lights.
+
+.cpt (or other paint program) ----- allows for tweaking specfic 'layers' on textures, such as the gray darkness without effecting edge highlights or light colors. Atleast save these layers:
+	uv_map
+	diffuse_decals
+	diffuse_highlights
+	diffuse_background
+	material
+	mask
+
+.3ds ----- the final unit with bones assigned, but no animations. Usefull for building new animations without the hassle of getting a unit to function properly in 3ds max, or tweeking a model.
+_anim_(...).3ds ----- a unit with animations. The mesh should be present (even though it is removed before exporting to .fbx). This usefull for editing an animation without receating it.
+
+.fbx ----- useful for reconverting into a .papa while being easly viewable. Reconverting a model into a .papa allows for changing the directory the game looks for .papa textures.
+_anim_(...).fbx ----- same reasoning as above, (animations should not include meshes to save space). 
