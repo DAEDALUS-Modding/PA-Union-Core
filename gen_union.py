@@ -4,7 +4,10 @@ import os
 import shutil
 import json
 from datetime import datetime
+
 import click
+#use pip to install this
+
 import copytree_edit
 
 

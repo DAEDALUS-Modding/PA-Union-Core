@@ -1,4 +1,5 @@
 #not Union-licensed; code borrowed from https://stackoverflow.com/a/22331852
+#will become unnecessary once Python 3.8 happens.
 
 import os
 import shutil
