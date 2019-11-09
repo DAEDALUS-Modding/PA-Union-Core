@@ -1,0 +1,116 @@
+{
+    "base_spec": "/pa/units/land/base_bot/base_bot.json",
+    "unit_name": "pgen",
+    "display_name": "!LOC:Union of Energy Plants.",
+    "description": "!LOC:Basic Economy - Power plants deserve safe working conditions.",
+    "max_health": 750,
+    "build_metal_cost": 400,
+    "atrophy_rate": 7.5,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+    "area_build_type": "Line",
+    "production": {
+        "energy": 600
+    },
+    "unit_types": [
+        "UNITTYPE_Fabber",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Bot",
+        "UNITTYPE_Air",
+        "UNITTYPE_Tank",
+        "UNITTYPE_Vehicle",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Land",
+        "UNITTYPE_Basic",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_CmdBuild",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_CmdBuild"
+    ],
+    "navigation": {
+        "type": "amphibious",
+        "acceleration": 100,
+        "brake": -1,
+        "move_speed": 6,
+        "turn_speed": 100
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 25
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 100
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "{model.papa}",
+            "animations": {
+                "idle": "{anim_idle.papa}",
+                "walk": "{anim_run.papa}"
+            },
+            "animtree": "{anim_tree.json}",
+            "walk_speed": 10
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/energy"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Factory",
+            "effect_scale": 0.5
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/energy"
+        },
+        "headlights": [
+            {
+                "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+                "offset": [
+                    0,
+                    0.0,
+                    3
+                ],
+                "orientation": [
+                    0,
+                    0.0,
+                    0.0
+                ],
+                "near_width": 5.5,
+                "near_height": 5.5,
+                "near_distance": 2.5,
+                "far_distance": 15.0,
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "intensity": 1.0
+            }
+        ]
+    },
+    "selection_icon": {
+        "diameter": 15.0
+    },
+    "mesh_bounds": [
+        4,
+        4,
+        4
+    ],
+    "TEMP_texelinfo": 4.07719
+}

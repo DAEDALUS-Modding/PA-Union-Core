@@ -3,12 +3,44 @@
 import os
 import shutil
 import json
+import sys
 from datetime import datetime
 
 import click
 #use pip to install this
 
 import copytree_edit
+
+def gen_folder_names():
+    folder_names = ['union_license/', 
+                        'vanilla_derivative/',
+                        'legion_derivative/']
+    for i in os.listdir('other_derivative'):
+        if os.path.isdir('other_derivative/' + i):
+            folder_names.append('other_derivative/' + i + '/')
+    return folder_names
+
+def call_paeiou(client, server, folder_names):
+    paeiou_dir_in = "PAEIOU_directory.txt"
+    if (os.path.isfile(paeiou_dir_in)):
+        with open(paeiou_dir_in) as infile:
+            paeiou_path = infile.readline()
+    else:
+        paeiou_path = input("PAEIOU path: ")
+        with open(paeiou_dir_in, 'w+') as outfile:
+            outfile.write(paeiou_path)
+    sys.path.insert(1, paeiou_path)
+
+    import paeiou
+
+    paeiou_input_path = "gen/PAEIOU/in"
+    
+    for i in [name + "PAEIOU_build" for name in folder_names]:
+        if os.path.isdir(i):
+            copytree_edit.copytree(i, paeiou_input_path)
+
+    paeiou.direct_function(client, server, 0, 0, "com.pa.union", paeiou_input_path + "/units/", 
+                        paeiou_input_path + "/unit_add_list.txt", "gen/PAEIOU/out/")
 
 
 def gen_modinfo(buildtype, test):
@@ -33,17 +65,10 @@ def gen_modinfo(buildtype, test):
 
     return modinfo
 
-def build(buildtype, test):
-    folder_names = ['union_license/', 
-                    'vanilla_derivative/',
-                    'legion_derivative/']
-    for i in os.listdir('other_derivative'):
-        if os.path.isdir('other_derivative/' + i):
-            folder_names.append('other_derivative/' + i + '/')
-    
-
+def build(buildtype, test, folder_names):
     for i in [name + buildtype for name in folder_names]:
-        copytree_edit.copytree(i, "gen/" + buildtype)
+        if os.path.isdir(i):
+            copytree_edit.copytree(i, "gen/" + buildtype)
 
     with open("gen/" + buildtype + "/modinfo.json", 'w') as out:
         json.dump(gen_modinfo(buildtype, test), out)
@@ -53,10 +78,15 @@ def build(buildtype, test):
 @click.option('--server/--no-server', default=True)
 @click.option('--test/--prod', default=True)
 def main(client, server, test):
+    folder_names = gen_folder_names()
+
+    call_paeiou(client, server, folder_names)
+    # folder_names.append("gen/PAEIOU/out/")
+
     if client:
-        build("client", test)
+        build("client", test, folder_names)
     if server:
-        build("server", test)
+        build("server", test, folder_names)
 
 
 if __name__ == '__main__':

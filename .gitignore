@@ -1,1 +1,7 @@
 temp/**
+paeiou_directory.txt
+__pycache__/**
+gen/paeiou/**
+gen/client/**
+gen/server/**
+anon-files/**
