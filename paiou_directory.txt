@@ -1,1 +1,0 @@
-paeiou.main(buildtype == "client", buildtype == "server",

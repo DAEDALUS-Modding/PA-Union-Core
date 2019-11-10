@@ -1,3 +1,7 @@
 crawler/t1/can/
 crawler/t1/arc/
+crawler/t2/luddite/
+crawler/t2/foxhound/
+crawler/t2/gale/
+heavy_crawler/t1/ogre/
 structure/t1/power_plant/

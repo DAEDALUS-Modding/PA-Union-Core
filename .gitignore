@@ -5,3 +5,4 @@ gen/paeiou/**
 gen/client/**
 gen/server/**
 anon-files/**
+pa_location.txt

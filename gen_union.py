@@ -50,6 +50,7 @@ def gen_modinfo(buildtype, test):
     with open("edit.modinfo.json") as infile:
         extra_info = json.load(infile)
 
+    modinfo["context"] = buildtype
     modinfo["date"] = datetime.today().strftime('%Y-%m-%d')
     modinfo["build"] = extra_info["build"]
     version_data = (str(extra_info["version"]), str(extra_info["subversion"]), str(extra_info["increment"]))
@@ -78,10 +79,12 @@ def build(buildtype, test, folder_names):
 @click.option('--server/--no-server', default=True)
 @click.option('--test/--prod', default=True)
 def main(client, server, test):
+    shutil.rmtree("gen")
+
     folder_names = gen_folder_names()
 
     call_paeiou(client, server, folder_names)
-    # folder_names.append("gen/PAEIOU/out/")
+    folder_names.append("gen/PAEIOU/out/")
 
     if client:
         build("client", test, folder_names)
