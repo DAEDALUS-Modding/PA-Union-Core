@@ -6,7 +6,7 @@
             "id": "{ammo.json}"
         }
     ],
-    "rate_of_fire": 10,
+    "rate_of_fire": 7,
     "idle_aim_delay": 0.2,
     "max_range": 65,
     "yaw_rate": 360,

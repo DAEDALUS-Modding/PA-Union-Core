@@ -13,7 +13,6 @@
         "energy": 600
     },
     "unit_types": [
-        "UNITTYPE_Mobile",
         "UNITTYPE_Structure",
         "UNITTYPE_EnergyProduction",
         "UNITTYPE_Basic",

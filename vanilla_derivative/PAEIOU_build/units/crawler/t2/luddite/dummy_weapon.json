@@ -1,0 +1,16 @@
+{
+    "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
+    "ammo_id": "{dummy_ammo.json}",
+    "rate_of_fire": 0,
+    "idle_aim_delay": 1.0,
+    "max_range": 40,
+    "yaw_rate": 720,
+    "pitch_rate": 360,
+    "yaw_range": 180,
+    "pitch_range": 40,
+    "auto_attack": true,
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_WaterSurface"
+    ]
+}

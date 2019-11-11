@@ -69,6 +69,13 @@
     },
     "tools": [
         {
+            "spec_id": "{dummy_weapon.json}",
+            "aim_bone": "bone_turret",
+            "muzzle_bone": [
+                "socket_right_muzzle"
+            ]
+        },
+        {
             "spec_id": "{weapon.json}",
             "aim_bone": "bone_turret",
             "muzzle_bone": [

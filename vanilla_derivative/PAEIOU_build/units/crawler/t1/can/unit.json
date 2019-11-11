@@ -32,7 +32,6 @@
     },
     "guard_layer": "WL_AnySurface",
     "navigation": {
-        "type": "amphibious",
         "acceleration": 50,
         "brake": -1,
         "move_speed": 15,
