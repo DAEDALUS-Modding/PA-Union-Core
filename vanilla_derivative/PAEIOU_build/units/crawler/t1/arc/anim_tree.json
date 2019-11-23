@@ -13,7 +13,7 @@
                 },
                 "node_walk": {
                     "type": "playback",
-                    "anim_name": "run"
+                    "anim_name": "walk"
                 }
             },
             "dead": {

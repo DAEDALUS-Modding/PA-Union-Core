@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
     "display_name": "Arc",
-    "description": "!LOC:Mobile Anti-Air - Equipped with homing missiles. Only attacks air.",
+    "description": "!LOC:Mobile Anti-Air - Shoots electricity. Only attacks air.",
     "max_health": 160,
     "build_metal_cost": 150,
     "attachable": {
@@ -19,14 +19,14 @@
         }
     },
     "unit_types": [
-        "UNITTYPE_Tank",
+        "UNITTYPE_Bot",
         "UNITTYPE_Mobile",
         "UNITTYPE_AirDefense",
         "UNITTYPE_Land",
         "UNITTYPE_Basic",
         "UNITTYPE_FactoryBuild",
-        "UNITTYPE_CannonBuildable",
-        "UNITTYPE_Offense"
+        "UNITTYPE_Offense",
+        "UNITTYPE_Custom2"
     ],
     "transportable": {
         "size": 1
@@ -36,8 +36,8 @@
         "type": "land-small",
         "acceleration": 100,
         "brake": 100,
-        "move_speed": 10,
-        "turn_speed": 180
+        "move_speed": 12,
+        "turn_speed": 720
     },
     "physics": {
         "radius": 3.5
@@ -64,14 +64,14 @@
         "filename": "{model.papa}",
         "animations": {
             "idle": "{anim_idle.papa}",
-            "run": "{anim_run.papa}"
+            "walk": "{anim_run.papa}"
         },
         "animtree": "{anim_tree.json}"
     },
-    "nearby_target_tick_update_interval": 3,
+    "nearby_target_tick_update_interval": 20,
     "tools": [
         {
-            "spec_id": "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle_tool_weapon.json",
+            "spec_id": "{weapon.json}",
             "aim_bone": "socket_muzzle",
             "muzzle_bone": "socket_muzzle"
         }
@@ -98,6 +98,23 @@
                 "should_stop_func": "is_not_moving"
             }
         },
+        "lamps": [
+            {
+                "offset": [
+                    0,
+                    0,
+                    1
+                ],
+                "radius": 5.0,
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "intensity": 20.0,
+                "bone": "bone_root"
+            }
+        ],
         "selection_response": {
             "cue": "/SE/Selection/veh/aa_missile_vehicle"
         }

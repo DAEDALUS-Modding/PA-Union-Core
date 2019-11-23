@@ -25,7 +25,8 @@
         "UNITTYPE_Land",
         "UNITTYPE_Basic",
         "UNITTYPE_FactoryBuild",
-        "UNITTYPE_CannonBuildable"
+        "UNITTYPE_CannonBuildable",
+        "UNITTYPE_Custom2"
     ],
     "transportable": {
         "size": 1
@@ -122,30 +123,8 @@
                 0.92,
                 1.0
             ],
-            "intensity": 1.4
-        },
-        {
-            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
-            "offset": [
-                -0.2,
-                -0,
-                0
-            ],
-            "orientation": [
-                0.0,
-                65.0,
-                0.0
-            ],
-            "near_width": 2.0,
-            "near_height": 2.0,
-            "near_distance": 1.2,
-            "far_distance": 20.0,
-            "color": [
-                0.9,
-                0.92,
-                1.0
-            ],
-            "intensity": 1.4
+            "intensity": 1.4,
+            "bone": "bone_turret"
         }
     ],
     "selection_icon": {

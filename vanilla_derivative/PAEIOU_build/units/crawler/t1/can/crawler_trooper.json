@@ -1,0 +1,139 @@
+{
+    "base_spec": "/pa/units/land/base_bot/base_bot.json",
+    "display_name": "CanMk2",
+    "description": "!LOC:Union Can, counters swarms of dox and booms.",
+    "max_health": 90,
+    "build_metal_cost": 70,
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                3.5
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Bot",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land",
+        "UNITTYPE_Basic",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_CannonBuildable"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "guard_layer": "WL_AnySurface",
+    "navigation": {
+        "type": "amphibious",
+        "acceleration": 50,
+        "brake": -1,
+        "move_speed": 15,
+        "turn_speed": 720
+    },
+    "physics": {
+        "radius": 2.0
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 105
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 105
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/union/land/crawler_trooper/crawler_trooper.papa",
+        "animations": {
+            "idle": "/pa/units/union/land/crawler_trooper/crawler_trooper_idle.papa",
+            "walk": "/pa/units/union/land/crawler_trooper/crawler_trooper_run.papa"
+        },
+        "animtree": "/pa/units/union/land/crawler_trooper/union_mech_anim_tree.json",
+        "walk_speed": 5
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/union/land/crawler_trooper/crawler_trooper_tool_weapon.json",
+            "aim_bone": "bone_pitch",
+            "projectiles_per_fire": 1,
+            "muzzle_bone": [
+                "socket_right_muzzle",
+                "socket_left_muzzle"
+            ]
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/bot"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/bot/assault_fire",
+            "effect_spec": "/pa/effects/specs/default_small_muzzle_flash.pfx socket_right_muzzle /pa/effects/specs/default_small_muzzle_flash.pfx socket_left_muzzle"
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/bot/assault_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/bot/assault"
+        }
+    },
+    "headlights": [
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0.2,
+                0,
+                0
+            ],
+            "orientation": [
+                0.0,
+                65.0,
+                0.0
+            ],
+            "near_width": 2.0,
+            "near_height": 2.0,
+            "near_distance": 1.2,
+            "far_distance": 20.0,
+            "color": [
+                0.9,
+                0.92,
+                1.0
+            ],
+            "intensity": 1.4,
+            "bone": "bone_turret"
+        }
+    ],
+    "selection_icon": {
+        "diameter": 10.0
+    },
+    "mesh_bounds": [
+        4,
+        4,
+        6
+    ],
+    "TEMP_texelinfo": 4.07719
+}

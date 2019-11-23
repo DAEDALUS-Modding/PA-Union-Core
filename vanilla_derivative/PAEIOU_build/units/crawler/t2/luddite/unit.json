@@ -70,10 +70,9 @@
     "tools": [
         {
             "spec_id": "{dummy_weapon.json}",
-            "aim_bone": "bone_turret",
-            "muzzle_bone": [
-                "socket_right_muzzle"
-            ]
+            "aim_bone": "bone_root",
+            "muzzle_bone": "bone_root",
+            "record_index": -1
         },
         {
             "spec_id": "{weapon.json}",
@@ -81,7 +80,8 @@
             "muzzle_bone": [
                 "socket_right_muzzle",
                 "socket_left_muzzle"
-            ]
+            ],
+            "record_index": 0
         }
     ],
     "events": {

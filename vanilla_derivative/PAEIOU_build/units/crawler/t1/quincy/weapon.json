@@ -1,0 +1,21 @@
+{
+    "ammo_id": "{ammo.json}",
+    "auto_attack": true,
+    "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
+    "max_range": 20,
+    "pitch_range": 40,
+    "pitch_rate": 720,
+    "rate_of_fire": 12,
+    "target_layers": [
+      "WL_LandHorizontal",
+      "WL_WaterSurface",
+      "WL_Seafloor"
+    ],
+    "target_priorities": [
+      "Commander",
+      "Titan & ( Land | Naval )",
+      "Nuke | NukeDefense"
+    ],
+    "yaw_range": 360,
+    "yaw_rate": 720
+  }

@@ -1,5 +1,0 @@
-resource-root: /pa/units/union/union_aa_t1
-srgb-texname-expression: diffuse|skybox
-texture-format-alpha: dxt5
-texture-format-noalpha: dxt1
-texture-max-size: 256
