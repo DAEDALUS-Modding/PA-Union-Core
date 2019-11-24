@@ -1,6 +1,7 @@
 crawler/t1/fab/
 crawler/t1/can/
 crawler/t1/quincy/
+crawler/t1/saboteur/
 crawler/t1/arc/
 crawler/t2/luddite/
 crawler/t2/foxhound/
@@ -9,3 +10,4 @@ heavy_crawler/t1/ogre/
 heavy_crawler/t1/monitor/
 structure/t1/power_plant/
 structure/t1/crawler_factory/
+structure/t1/plug/

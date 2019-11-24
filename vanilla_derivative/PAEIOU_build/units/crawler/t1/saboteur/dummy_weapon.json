@@ -1,4 +1,4 @@
 {
     "base_spec": "/pa/units/union/dummy_weapon.json",
-    "max_range": 1
+    "max_range": 125
 }

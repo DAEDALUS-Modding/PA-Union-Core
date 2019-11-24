@@ -40,7 +40,7 @@
         "turn_speed": 720
     },
     "physics": {
-        "radius": 2.25,
+        "radius": 4.25,
         "allow_pushing": true
     },
     "recon": {

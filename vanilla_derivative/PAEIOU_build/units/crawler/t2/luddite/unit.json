@@ -2,7 +2,7 @@
     "base_spec": "/pa/units/land/base_bot/base_bot.json",
     "display_name": "Luddite",
     "description": "!LOC:Adv Close-range Assault Crawler - Fast Assault crawler with a rapid attack.",
-    "max_health": 800,
+    "max_health": 700,
     "build_metal_cost": 600,
     "attachable": {
         "offsets": {
@@ -34,7 +34,7 @@
         "group_preference": "front",
         "acceleration": 120,
         "brake": -1,
-        "move_speed": 15,
+        "move_speed": 12,
         "turn_speed": 720
     },
     "physics": {
@@ -72,6 +72,7 @@
             "spec_id": "{dummy_weapon.json}",
             "aim_bone": "bone_root",
             "muzzle_bone": "bone_root",
+            "primary_weapon": true,
             "record_index": -1
         },
         {
