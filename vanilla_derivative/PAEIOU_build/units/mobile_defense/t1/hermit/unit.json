@@ -1,0 +1,116 @@
+{
+    "base_spec": "/pa/units/union/mobile_structure_base.json",
+    "display_name": "Hermit",
+    "description": "!LOC:Artillery - Medium range for siege and area denial. Attacks land and sea targets, moves!.",
+    "max_health": 1000,
+    "build_metal_cost": 900,
+    "atrophy_rate": 25,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+    "unit_types": [
+        "UNITTYPE_Artillery",
+        "UNITTYPE_Defense",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_Basic"
+    ],
+    "navigation": {
+        "type": "amphibious",
+        "acceleration": 100,
+        "brake": -1,
+        "move_speed": 6,
+        "turn_speed": 20,
+        "group_preference": "back"
+    },
+    "command_caps": [
+        "ORDER_Attack",
+        "ORDER_Move",
+        "ORDER_Stop",
+        "ORDER_Assist"
+    ],
+    "guard_layer": "WL_AnySurface",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 100
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 100
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "filename": "{model.papa}",
+            "animations": {},
+            "animtree": "/pa/anim/anim_trees/turret_anim_tree.json"
+        }
+    ],
+    "nearby_target_tick_update_interval": 4,
+    "tools": [
+        {
+            "spec_id": "{weapon.json}",
+            "aim_bone": "socket_muzzle",
+            "muzzle_bone": "socket_muzzle"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/structure_small"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/artillery_short_fire",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle /pa/effects/specs/artillery_muzzle_ground.pfx"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/structure_small",
+            "effect_scale": 0.6
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/artillery"
+        }
+    },
+    "lamps": [
+        {
+            "offset": [
+                0.0,
+                -4.24,
+                1.77
+            ],
+            "radius": 1.75,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "intensity": 2.0,
+            "bone": "bone_pitch"
+        }
+    ],
+    "selection_icon": {
+        "diameter": 21.0
+    },
+    "mesh_bounds": [
+        8,
+        10,
+        8.9
+    ],
+    "placement_size": [
+        15,
+        15
+    ],
+    "scrolling_uv": {
+        "scroll_rate": -0.32,
+        "uv_split": 0.75
+    },
+    "TEMP_texelinfo": 12.901
+}

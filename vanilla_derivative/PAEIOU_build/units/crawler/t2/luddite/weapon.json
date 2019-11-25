@@ -3,7 +3,7 @@
     "ammo_id": "{ammo.json}",
     "rate_of_fire": 15.0,
     "idle_aim_delay": 0,
-    "max_range": 120,
+    "max_range": 110,
     "yaw_rate": 720,
     "pitch_rate": 360,
     "yaw_range": 180,

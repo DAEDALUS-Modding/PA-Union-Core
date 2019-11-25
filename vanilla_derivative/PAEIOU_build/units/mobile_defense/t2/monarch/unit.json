@@ -1,0 +1,151 @@
+{
+    "base_spec": "/pa/units/union/mobile_structure_base.json",
+    "display_name": "Monarch",
+    "description": "!LOC:Advanced Artillery - Extremely long range heavy damage. Can lay siege from very far away. Attacks land and sea targets.",
+    "max_health": 4000,
+    "build_metal_cost": 9000,
+    "atrophy_rate": 240.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+    "unit_types": [
+        "UNITTYPE_Land",
+        "UNITTYPE_Artillery",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Important"
+    ],
+    "navigation": {
+        "type": "amphibious",
+        "acceleration": 100,
+        "brake": -1,
+        "move_speed": 6,
+        "turn_speed": 20,
+        "group_preference": "back"
+    },
+    "command_caps": [
+        "ORDER_Attack",
+        "ORDER_Move",
+        "ORDER_Stop",
+        "ORDER_Assist"
+    ],
+    "guard_layer": "WL_AnySurface",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "filename": "{model.papa}",
+            "animations": {
+                "idle": "{anim_idle.papa}",
+                "walk": "{anim_run.papa}"
+            },
+            "animtree": "{anim_tree.json}",
+            "walk_speed": 1.5
+        }
+    ],
+    "nearby_target_tick_update_interval": 10,
+    "tools": [
+        {
+            "spec_id": "{weapon.json}",
+            "aim_bone": "socket_left_muzzle",
+            "projectiles_per_fire": 2,
+            "muzzle_bone": [
+                "socket_left_muzzle",
+                "socket_right_muzzle"
+            ]
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/structure_small"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/artillery_long_fire",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_right_muzzle /pa/effects/specs/tank_muzzle_flash.pfx socket_left_muzzle"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/structure_small",
+            "effect_scale": 1.2
+        }
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/artillery"
+        }
+    },
+    "lamps": [
+        {
+            "offset": [
+                5.0,
+                -9.21,
+                11
+            ],
+            "radius": 7.0,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "intensity": 5.0,
+            "bone": "bone_pitch"
+        },
+        {
+            "offset": [
+                -5.0,
+                -9.21,
+                11
+            ],
+            "radius": 7.0,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "intensity": 5.0,
+            "bone": "bone_pitch"
+        },
+        {
+            "offset": [
+                0,
+                6,
+                6
+            ],
+            "radius": 5.0,
+            "color": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "intensity": 3.0,
+            "bone": "bone_root"
+        }
+    ],
+    "selection_icon": {
+        "diameter": 30.0
+    },
+    "mesh_bounds": [
+        15,
+        25,
+        15.0376
+    ],
+    "placement_size": [
+        30,
+        30
+    ],
+    "TEMP_texelinfo": 26.6522
+}

@@ -1,0 +1,33 @@
+{
+    "base_spec": "/pa/tools/base_artillery_turret/base_artillery_turret.json",
+    "ammo_id": "{ammo.json}",
+    "rate_of_fire": 8,
+    "max_firing_velocity": 300,
+    "min_firing_velocity": 50,
+    "ammo_source": "energy",
+    "ammo_capacity": 1000,
+    "ammo_demand": 250,
+    "ammo_per_shot": 250,
+    "max_range": 230,
+    "yaw_rate": 50,
+    "pitch_rate": 100,
+    "yaw_range": 180,
+    "pitch_range": 360,
+    "firing_arc_yaw": 0,
+    "firing_arc_pitch": 5,
+    "auto_attack": true,
+    "firing_standard_deviation": 0.75,
+    "physics": {
+        "radius": 1,
+        "gravity_scalar": 2,
+        "add_to_spatial_db": false
+    },
+    "target_layers": [
+        "WL_LandHorizontal",
+        "WL_Seafloor",
+        "WL_WaterSurface",
+        "WL_Underwater"
+    ],
+    "carpet_fire": true,
+    "carpet_wait_for_full_ammo": true
+}

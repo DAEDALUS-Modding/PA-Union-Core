@@ -125,18 +125,13 @@
     "tools": [
         {
             "aim_bone": "bone_root",
-            "spec_id": "{dummy_weapon.json}",
-            "muzzle_bone": "bone_root",
-            "record_index": -1
-        },
-        {
-            "aim_bone": "bone_root",
             "spec_id": "{fab_tool.json}"
         },
         {
             "aim_bone": "bone_turret",
             "spec_id": "{weapon.json}",
-            "muzzle_bone": "bone_turret"
+            "muzzle_bone": "bone_turret",
+            "primary_weapon": true
         }
     ]
 }

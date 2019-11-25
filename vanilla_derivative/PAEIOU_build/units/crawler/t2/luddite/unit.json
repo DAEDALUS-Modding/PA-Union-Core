@@ -38,7 +38,7 @@
         "turn_speed": 720
     },
     "physics": {
-        "radius": 3.5
+        "radius": 4
     },
     "recon": {
         "observer": {
@@ -65,7 +65,7 @@
             "walk": "{anim_walk.papa}"
         },
         "animtree": "{anim_tree.json}",
-        "walk_speed": 12
+        "walk_speed": 13
     },
     "tools": [
         {
