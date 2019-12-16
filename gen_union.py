@@ -62,7 +62,7 @@ def gen_modinfo(buildtype, test):
     extra_info["increment"] += 1
 
     with open("edit.modinfo.json", 'w') as out:
-        json.dump(extra_info, out)
+        json.dump(extra_info, out, indent="\t")
 
     return modinfo
 
@@ -72,7 +72,7 @@ def build(buildtype, test, folder_names):
             copytree_edit.copytree(i, "gen/" + buildtype)
 
     with open("gen/" + buildtype + "/modinfo.json", 'w') as out:
-        json.dump(gen_modinfo(buildtype, test), out)
+        json.dump(gen_modinfo(buildtype, test), out, indent="\t")
 
 @click.command()
 @click.option('--client/--no-client', default=True)
