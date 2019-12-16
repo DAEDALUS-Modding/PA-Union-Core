@@ -10,12 +10,20 @@
     "influence_radius": 400,
     "audio_loop": "/SE/Movement/missile/artillery_short_missile_fly_loop",
     "model": {
-        "filename": "/pa/units/air/shell_large/shell_large.papa"
+        "filename": "/pa/units/air/shell/shell.papa"
     },
     "events": {
         "died": {
             "audio_cue": "/SE/Impacts/missile_artillery_short",
             "effect_spec": "/pa/effects/specs/default_explosion.pfx"
         }
+    },
+    "fx_trail": {
+        "filename": "{ammo_trail.pfx.json}",
+        "offset": [
+            0.0,
+            1.0,
+            0.0
+        ]
     }
 }
