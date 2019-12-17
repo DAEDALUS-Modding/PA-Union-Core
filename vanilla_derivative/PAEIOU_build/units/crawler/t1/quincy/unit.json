@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/units/land/base_bot/base_bot.json",
-    "display_name": "Quincy",
-    "description": "!LOC:Bomb Crawler - Self destructs to deal very heavy damage over a nearby area, tanky. Knida fast.",
+    "display_name": "Lobster",
+    "description": "!LOC:Frontline Crawler - Very hard to kill for its cost. Does small splash damage around it. Does more splash to enemies on death.",
     "max_health": 900,
     "build_metal_cost": 150,
     "spawn_layers": "WL_LandHorizontal",

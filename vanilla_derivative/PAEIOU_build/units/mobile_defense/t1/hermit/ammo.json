@@ -5,7 +5,7 @@
     "splash_radius": 8,
     "full_damage_splash_radius": 3,
     "splash_damages_allies": false,
-    "initial_velocity": 190.0,
+    "initial_velocity": 130.0,
     "lifetime": 30,
     "influence_radius": 400,
     "audio_loop": "/SE/Movement/missile/artillery_short_missile_fly_loop",
@@ -25,5 +25,9 @@
             1.0,
             0.0
         ]
-    }
+    },
+    "physics": {
+        "radius": 2,
+        "gravity_scalar": 7
+      }
 }

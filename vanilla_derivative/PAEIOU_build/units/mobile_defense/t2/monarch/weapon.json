@@ -5,7 +5,7 @@
     "max_firing_velocity": 10000,
     "min_firing_velocity": 10,
     "arc_type": "ARC_high",
-    "firing_standard_deviation": 6,
+    "firing_standard_deviation": 3,
     "rate_of_fire": 40,
     "ammo_capacity": 40000,
     "ammo_demand": 4000,
