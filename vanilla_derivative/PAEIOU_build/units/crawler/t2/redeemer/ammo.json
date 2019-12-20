@@ -1,6 +1,6 @@
 {
     "ammo_type": "AMMO_Beam",
-    "fx_beam_spec": "/pa/effects/specs/nanoswarm_attack.pfx",
+    "fx_beam_spec": "{attack_beam.pfx.json}",
     "fx_collision_spec": "/pa/effects/specs/nanoswarm_hit.pfx",
     "damage": 2,
     "damage_target": "Metal",

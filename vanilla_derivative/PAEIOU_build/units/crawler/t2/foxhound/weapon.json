@@ -1,9 +1,9 @@
 {
     "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
     "ammo_id": "{ammo.json}",
-    "rate_of_fire": 0.5,
+    "rate_of_fire": 0.4,
     "idle_aim_delay": 3.0,
-    "max_range": 240,
+    "max_range": 190,
     "yaw_rate": 150,
     "pitch_rate": 150,
     "yaw_range": 180,

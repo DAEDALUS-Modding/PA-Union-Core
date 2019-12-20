@@ -24,7 +24,6 @@
         "UNITTYPE_Mobile",
         "UNITTYPE_Offense",
         "UNITTYPE_Land",
-        "UNITTYPE_Artillery",
         "UNITTYPE_Advanced",
         "UNITTYPE_FactoryBuild"
     ],
@@ -71,7 +70,6 @@
         "arrows": 5,
         "walk_speed": 4
     },
-    "nearby_target_tick_update_interval": 15,
     "tools": [
         {
             "spec_id": "{weapon.json}",
