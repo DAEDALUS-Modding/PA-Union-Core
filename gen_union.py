@@ -40,7 +40,8 @@ def call_paeiou(client, server, folder_names):
             copytree_edit.copytree(i, paeiou_input_path)
 
     paeiou.direct_function(client, server, 0, 0, "com.pa.union", paeiou_input_path + "/units/", 
-                        paeiou_input_path + "/unit_add_list.txt", "gen/PAEIOU/out/")
+                        paeiou_input_path + "/unit_add_list.txt", "gen/PAEIOU/out/", 
+                        nmu_path = paeiou_input_path + "/non-managed_units_list.txt")
 
 
 def gen_modinfo(buildtype, test):

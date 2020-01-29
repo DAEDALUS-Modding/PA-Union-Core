@@ -1,0 +1,124 @@
+{
+    "base_spec": "/pa/units/union/base_union_comm.json",
+    "display_name": "Valiant Commander",
+    "si_name": "u_commander_a",
+    "description": "Basic Union Commander.",
+    "model": {
+        "filename": "/pa/units/commanders/union_valiant/model.papa",
+        "animations": {
+            "death01": "/pa/units/commanders/union_valiant/model.papa",
+            "walk": "/pa/units/commanders/union_valiant/anim_run.papa",
+            "idle": "/pa/units/commanders/union_valiant/anim_idle.papa",
+            "walk_stop": "/pa/units/commanders/union_valiant/model.papa",
+            "aim_up": "/pa/units/commanders/union_valiant/model.papa",
+            "aim_down": "/pa/units/commanders/union_valiant/model.papa"
+        },
+        "animtree": "/pa/units/commanders/union_valiant/anim_tree.json",
+        "walk_speed": 3.5
+    },
+    "navigation": {
+        "turn_in_place": false
+    },
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Commander_contruction_beam_loop",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            },
+            "move": {
+                "cue": "/SE/Movement/commander/Commander_move_loop_tank",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        }
+    },
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                15.6
+            ]
+        }
+    },
+    "headlights": [
+        {
+            "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+            "offset": [
+                0,
+                -3.2,
+                -2.5
+            ],
+            "orientation": [
+                0.0,
+                45.0,
+                0.0
+            ],
+            "near_width": 5.0,
+            "near_height": 5.0,
+            "near_distance": 3.0,
+            "far_distance": 30.0,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "intensity": 6.0,
+            "bone": "bone_head",
+            "shadow_resolution": 128
+        }
+    ],
+    "lamps": [
+        {
+            "offset": [
+                0,
+                -3.2,
+                -2.5
+            ],
+            "radius": 2.0,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "intensity": 5.0,
+            "bone": "bone_head"
+        },
+        {
+            "offset": [
+                0.4,
+                -4.06,
+                -3
+            ],
+            "radius": 4.0,
+            "color": [
+                0.4,
+                1.0,
+                0.01
+            ],
+            "intensity": 2.0,
+            "bone": "bone_left_shoulder"
+        }
+    ],
+    "mesh_bounds": [
+        11.1,
+        9.8,
+        15.4
+    ],
+    "catalog_object_name": "TankAeson",
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_union_valiant.png",
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_union_valiant_thumb.png",
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_union_valiant.png"
+        }
+    }
+}

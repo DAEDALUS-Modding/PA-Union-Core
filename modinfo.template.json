@@ -19,7 +19,11 @@
             "coui://ui/mods/com.pa.union/shared_build.js"
         ],
         "icon_atlas": [
-            "coui://ui/mods/com.pa.union/icon_atlas.js"
+            "coui://ui/mods/com.pa.union/icon_atlas.js",
+            "coui://ui/mods/com.pa/union/icon_atlas_manual.js"
+        ],
+        "new_game": [
+            "coui://ui/mods/com.pa.union/new_game.js"
         ]
     }
 }
