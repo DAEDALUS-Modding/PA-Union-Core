@@ -1,0 +1,4 @@
+Work in this folder is derivative of [Legion Expansion](https://github.com/Legion-Expansion/Legion-Expansion/) by nicb1, Crembels, KillerKiwiJuice, mgmetal13, zx0, Alpha2546, PRoeleert, wondible, mikeyh, Quitch, Stuart98, dom314, CptConundrum, Elodea, AndreasG, Clopse, Graushwein, N30N, Qzipco, WPMarshall, xankar used under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
+Work in this folder is thus subject to the terms of both  [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) by [YOUR-NAME-HERE] and MIT for software portions containing JavaScript code.

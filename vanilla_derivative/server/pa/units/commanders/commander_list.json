@@ -69,6 +69,7 @@
         "/pa/units/commanders/tank_banditks/tank_banditks.json",
         "/pa/units/commanders/tank_reaver/tank_reaver.json",
         "/pa/units/commanders/tank_sadiga/tank_sadiga.json",
-        "/pa/units/commanders/union_valiant/union_valiant.json"
+        "/pa/units/commanders/union_valiant/union_valiant.json",
+        "/pa/units/commanders/union_valiant/union_formidable.json"
     ]
 }

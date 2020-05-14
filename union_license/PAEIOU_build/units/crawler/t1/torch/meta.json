@@ -1,0 +1,4 @@
+{
+    "unit": "torch.json",
+    "models": ["torch.papa"]
+}

@@ -1,0 +1,1 @@
+1. All contributors to Union Faction for Planetary Annihilation are expected to 

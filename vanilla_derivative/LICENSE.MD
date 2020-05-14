@@ -1,0 +1,5 @@
+Content in this folder and its subfolders is either the original work of contributors to the Union Faction for Planetary Annihilation, work belonging to the owners of the intellectual property for Planetary Annihilation (currently PA Inc. as of May 14th, 2020), or a mix of the two.
+
+We, the Union Faction for Planetary Annihilation, are thus unable to offer a full blanket MIT license on all content in this folder and its subfolders, but all deviations from content originally used from Planetary Annihilation—the work of contributors to the Union Faction for Planetary Annihilation—are offered under the terms of the MIT license.
+
+Therefore, the owners of the intellectual property for Planetary Annihilation possess the ability to redistribute content within this folder and its subfolders under the terms of the MIT license, if they so choose to exercise this privilege.

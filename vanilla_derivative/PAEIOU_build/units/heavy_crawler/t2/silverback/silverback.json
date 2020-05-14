@@ -1,0 +1,140 @@
+{
+    "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+    "display_name": "Sliverback",
+    "description": "!LOC:Mobile Defence Platform - Can shoot down missiles and orbital units. todo Fix name",
+    "build_metal_cost": 1200,
+    "max_health": 400,
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                2.7
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Bot",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land",
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Custom2"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "guard_layer": "WL_AnySurface",
+    "navigation": {
+        "type": "land-small",
+        "acceleration": 60,
+        "brake": 10,
+        "move_speed": 10,
+        "turn_speed": 60,
+        "group_preference": "back"
+    },
+    "physics": {
+        "radius": 4
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 150
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 150
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "{silverback.papa}",
+        "animations": {
+            "deploy": "{silverback_anim_deploy.papa}",
+            "closed": "{silverback_anim_closed.papa}"
+        },
+        "animtree": "{silverback_anim_tree.json}"
+    },
+    "tools": [
+        {
+            "spec_id": "{silverback_orbital_weapon.json}",
+            "aim_bone": "socket_laser",
+            "muzzle_bone": [
+                "socket_laser"
+            ]
+        },
+        {
+            "spec_id": "{silverback_antidrop_weapon.json}",
+            "aim_bone": "socket_laser",
+            "muzzle_bone": [
+                "socket_laser"
+            ]
+        },
+        {
+            "spec_id": "{silverback_antimissile_weapon_1.json}",
+            "aim_bone": "socket_front_anti_missile",
+            "muzzle_bone": [
+                "socket_front_anti_missile"
+            ]
+        },
+        {
+            "spec_id": "{silverback_antimissile_weapon_2.json}",
+            "aim_bone": "socket_rear_anti_missile",
+            "muzzle_bone": [
+                "socket_rear_anti_missile"
+            ]
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/veh"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/orb/orbital_battleship_fire",
+            "effect_spec": ""
+        },
+        "died": {
+            "effect_spec": "",
+            "audio_cue": "/SE/Death/Veh"
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/veh/nuke_tank_loop",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/veh/tank_vagaurd_T2"
+        }
+    },
+    "selection_icon": {
+        "diameter": 24.0
+    },
+    "TEMP_texelinfo": 5.47132,
+    "scrolling_uv": {
+        "scroll_rate": -0.6,
+        "uv_split": 0.93
+    },
+    "mesh_bounds": [
+        9,
+        10,
+        10
+    ]
+}

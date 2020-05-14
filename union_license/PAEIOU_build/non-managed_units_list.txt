@@ -1,3 +1,4 @@
 /pa/units/union/base_union_comm.json
 /pa/units/union/mobile_structure_base.json
 /pa/units/commanders/union_valiant/union_valiant.json
+/pa/units/commanders/union_formidable/union_formidable.json

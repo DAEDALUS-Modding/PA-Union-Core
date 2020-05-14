@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/units/union/base_union_comm.json",
     "display_name": "Valiant Commander",
-    "si_name": "u_commander_a",
+    "si_name": "commander_union",
     "description": "Basic Union Commander.",
     "model": {
         "filename": "/pa/units/commanders/union_valiant/model.papa",
